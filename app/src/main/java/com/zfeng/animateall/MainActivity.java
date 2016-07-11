@@ -1,5 +1,6 @@
 package com.zfeng.animateall;
 
+import android.content.Intent;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,31 +11,27 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
-    ViewGroup transitionContainer;
-    TextView text;
-    Button button;
+    Button button1,button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        transitionContainer=(ViewGroup) findViewById(R.id.transitions_container);
-        text=(TextView)findViewById(R.id.text);
-        button=(Button)findViewById(R.id.button);
+        button1=(Button)findViewById(R.id.button1);
+        button2=(Button)findViewById(R.id.button2);
 
-        button.setOnClickListener(new View.OnClickListener(){
-            boolean visible;
-
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.KITKAT)
-                {
-                    //如果去掉这条语句，动画会显的十分生硬
-                    TransitionManager.beginDelayedTransition(transitionContainer);
-                    visible=!visible;
-                    text.setVisibility(visible?View.VISIBLE:View.GONE);
-                }
+                Intent intent=new Intent(MainActivity.this,AddTextActivity.class);
+                startActivity(intent);
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,RemoveAllRecycler.class);
+                startActivity(intent);
             }
         });
     }
