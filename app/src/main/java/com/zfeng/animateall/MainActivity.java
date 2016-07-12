@@ -11,7 +11,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    Button button1,button2,button3,button4,button5;
+    Button button1,button2,button3,
+            button4,button5,button6,button7,button8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
         button3=(Button)findViewById(R.id.button3);
         button4=(Button)findViewById(R.id.button4);
         button5=(Button)findViewById(R.id.button5);
+        button6=(Button)findViewById(R.id.button6);
+        button7=(Button)findViewById(R.id.button7);
+        button8=(Button)findViewById(R.id.button8);
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +59,27 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MainActivity.this,RotateActivity.class);
+                startActivity(intent);
+            }
+        });
+        button6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,PathMotionActivity.class);
+                startActivity(intent);
+            }
+        });
+        button7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,TextChangeActivity.class);
+                startActivity(intent);
+            }
+        });
+        button8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,CustomTransitionActivity.class);
                 startActivity(intent);
             }
         });

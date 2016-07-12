@@ -20,6 +20,9 @@
         <activity android:name=".FadeActivity"/>
         <activity android:name=".RecolorActivity"/>
         <activity android:name=".RotateActivity"/>
+        <activity android:name=".PathMotionActivity"/>
+        <activity android:name=".TextChangeActivity"/>
+        <activity android:name=".CustomTransitionActivity"/>
     </application>
 
 </manifest>
