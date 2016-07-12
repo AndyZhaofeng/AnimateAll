@@ -11,4 +11,4 @@
 
 2016-07-12：
 
-1：添加Fade、Recolor、Rotate；
+1：添加Fade、Recolor、Rotate、PathMotion、TextChange、CustomTransition。
